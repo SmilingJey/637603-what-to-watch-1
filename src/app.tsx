@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Router, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 import {history} from './helpers/history';
 
 import ScrollToTop from './components/scroll-to-top/scroll-to-top';
@@ -11,7 +11,7 @@ import MyListPage from './pages/my-list-page/my-list-page';
 
 const App = () => {
 
-  return <Router history={history}>
+  return <HashRouter history={history}>
     <ScrollToTop>
       <Switch>
         <Route path="/" exact component={MainPage}/>
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/mylist" component={MyListPage} />
       </Switch>
     </ScrollToTop>
-  </Router>;
+  </HashRouter>;
 };
 
 export default App;

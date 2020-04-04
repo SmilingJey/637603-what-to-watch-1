@@ -4,10 +4,11 @@
   "private": true,
   "description": "Проект «Что посмотреть»",
   "scripts": {
-    "build": "webpack --mode development",
+    "build": "webpack --mode production",
     "start": "webpack-dev-server",
     "tslint": "tslint src/**/*.ts src/**/*.tsx",
-    "test": "npm run tslint && jest"
+    "test": "npm run tslint && jest",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "@babel/core": "7.4.5",
